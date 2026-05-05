@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Plantilla web para Pipo & Preco, duo DJ español disponible para eventos, festivales y sesiones privadas.">
+    <title>Pipo & Preco | Plantilla web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-style="club">
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">P&P</span>
+        <span>Pipo & Preco</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button>
+        <i data-lucide="menu"></i>
+      </button>
+      <nav class="site-nav" data-nav>
+        <a href="#show">Show</a>
+        <a href="#musica">Musica</a>
+        <a href="#estilos">Estilos</a>
+        <a href="#prensa">Prensa</a>
+        <a href="#rider">Rider</a>
+        <a class="nav-cta" href="mailto:pipoypreco@gmail.com">
+          <i data-lucide="send"></i>
+          Booking
+        </a>
+      </nav>
+    </header>
+
+    <aside class="style-switcher" aria-label="Selector de estilos visuales">
+      <div>
+        <span>Estilo</span>
+        <strong data-style-name>Club nocturno</strong>
+      </div>
+      <div class="style-options" role="group" aria-label="Cambiar estilo de plantilla">
+        <button class="style-dot club is-active" type="button" data-style-option="club" aria-label="Estilo club nocturno"></button>
+        <button class="style-dot mediterranean" type="button" data-style-option="mediterranean" aria-label="Estilo mediterraneo premium"></button>
+        <button class="style-dot editorial" type="button" data-style-option="editorial" aria-label="Estilo editorial prensa"></button>
+        <button class="style-dot festival" type="button" data-style-option="festival" aria-label="Estilo festival urbano"></button>
+      </div>
+    </aside>
+
+    <main>
+      <section class="hero" id="inicio" aria-label="Presentacion de Pipo y Preco">
+        <picture>
+          <img src="assets/pipo-preco-cover.webp" alt="Pipo & Preco actuando en cabina" class="hero-media">
+        </picture>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Duo DJ · Espana · 100-140 BPM</p>
+          <h1>Pipo & Preco</h1>
+          <p class="hero-copy">
+            Una propuesta DJ abierta, reconocible y muy de directo: de la energia house al pop, rock, indie y latin para levantar cualquier pista.
+          </p>
+          <p class="template-credit">
+            Plantilla preparada por <strong>Mario Rodriguez</strong> y <strong>Guillermo Campos</strong>.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:pipoypreco@gmail.com">
+              <i data-lucide="calendar-plus"></i>
+              Solicitar fecha
+            </a>
+            <a class="button secondary" href="https://www.instagram.com/pipoyprecoshow" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="instagram"></i>
+              Instagram
+            </a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Datos rapidos">
+          <div>
+            <span>Formato</span>
+            <strong>Duo DJ</strong>
+          </div>
+          <div>
+            <span>Origen</span>
+            <strong>Espana</strong>
+          </div>
+          <div>
+            <span>Booking</span>
+            <strong>pipoypreco@gmail.com</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" id="show">
+        <div class="section-shell two-column">
+          <div>
+            <p class="section-kicker">Show</p>
+            <h2>Una cabina pensada para conectar generaciones.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              La web puede presentar a Pipo & Preco como una marca musical flexible para festivales, fiestas populares, clubes y eventos privados. Su repertorio permite moverse entre electronica bailable, hits populares, guitarras y sonidos latinos sin perder ritmo.
+            </p>
+            <div class="metric-row">
+              <div><strong>100</strong><span>BPM min.</span></div>
+              <div><strong>140</strong><span>BPM max.</span></div>
+              <div><strong>11</strong><span>generos base</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="music-section" id="musica">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="section-kicker">Musica</p>
+            <h2>Un set abierto, directo y reconocible.</h2>
+          </div>
+          <div class="genre-grid">
+            <span>Afro House</span>
+            <span>Funky House</span>
+            <span>Baile Funk EDM</span>
+            <span>Mediterranean Folk</span>
+            <span>Latin Pop</span>
+            <span>Indie Pop</span>
+            <span>Pop</span>
+            <span>Pop Rock</span>
+            <span>Heavy Metal</span>
+            <span>Indie Rock</span>
+            <span>Pop Punk</span>
+          </div>
+          <div class="set-cards">
+            <article>
+              <i data-lucide="radio"></i>
+              <h3>Festivales y macroeventos</h3>
+              <p>Entrada visual potente, repertorio popular y una curva de energia preparada para publico amplio.</p>
+            </article>
+            <article>
+              <i data-lucide="disc-3"></i>
+              <h3>Club y noche</h3>
+              <p>Bloques house, funk y latin con transiciones rapidas para mantener la pista arriba.</p>
+            </article>
+            <article>
+              <i data-lucide="sparkles"></i>
+              <h3>Eventos privados</h3>
+              <p>Formato adaptable, tono cercano y seleccion musical con margen para personalizar la experiencia.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-section">
+        <div class="section-shell profile-layout">
+          <div class="profile-image-wrap">
+            <img src="assets/pipo-preco-profile.webp" alt="Imagen de perfil de Pipo & Preco">
+          </div>
+          <div class="profile-copy">
+            <p class="section-kicker">Identidad</p>
+            <h2>Una web con cara, pulso y material de contratacion.</h2>
+            <p>
+              Esta plantilla esta preparada para evolucionar hacia una web final con biografia, calendario, videos, aftermovies, formulario de booking y press kit descargable. La estructura ya separa los argumentos clave para promotores, prensa y publico.
+            </p>
+            <a class="text-link" href="https://www.mavelpoint.com/es/artist/pipoypreco/overview" target="_blank" rel="noopener noreferrer">
+              Fuente de datos inicial
+              <i data-lucide="external-link"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="styles-section" id="estilos">
+        <div class="section-shell">
+          <div class="section-heading split">
+            <div>
+              <p class="section-kicker">Direcciones visuales</p>
+              <h2>Cuatro estilos para decidir con ellos en directo.</h2>
+            </div>
+            <p class="style-note">Cambia el look desde el selector fijo y conserva la misma estructura de contenidos.</p>
+          </div>
+          <div class="visual-grid">
+            <button class="visual-card club" type="button" data-style-card="club">
+              <span>01</span>
+              <h3>Club nocturno</h3>
+              <p>Oscuro, potente y muy musical. Ideal para vender energia de cabina y noche.</p>
+            </button>
+            <button class="visual-card mediterranean" type="button" data-style-card="mediterranean">
+              <span>02</span>
+              <h3>Mediterraneo premium</h3>
+              <p>Mas luminoso, cercano y elegante para eventos privados, marcas y ayuntamientos.</p>
+            </button>
+            <button class="visual-card editorial" type="button" data-style-card="editorial">
+              <span>03</span>
+              <h3>Editorial prensa</h3>
+              <p>Tipografia protagonista, aspecto de dossier y mayor peso para medios y trayectoria.</p>
+            </button>
+            <button class="visual-card festival" type="button" data-style-card="festival">
+              <span>04</span>
+              <h3>Festival urbano</h3>
+              <p>Color, contraste y actitud para cartel, escenario grande y comunicacion joven.</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="press-section" id="prensa">
+        <div class="section-shell">
+          <div class="section-heading split">
+            <div>
+              <p class="section-kicker">Prensa</p>
+              <h2>Apariciones y contexto publico.</h2>
+            </div>
+            <a class="button ghost" href="https://www.instagram.com/pipoyprecoshow" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="message-circle"></i>
+              Ver actividad
+            </a>
+          </div>
+          <div class="press-grid">
+            <a class="press-card featured" href="https://www.elespanol.com/castilla-y-leon/region/valladolid/20260221/legado-musical-generacion-cuadro-campus-resurge-valladolid-ido-manos/1003744136818_0.html" target="_blank" rel="noopener noreferrer">
+              <span>El Espanol · 21 feb 2026</span>
+              <h3>El legado musical del cuadro</h3>
+              <p>Entrevista previa al festival noventeros de Kiss FM.</p>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+            <a class="press-card image-card" href="https://www.elnortedecastilla.es/valladolid/eduardo-aguado-cerveceria-velardes-refugio-relajarme-despues-20260215083315-nt.html" target="_blank" rel="noopener noreferrer">
+              <img src="assets/press-preco.png" alt="Imagen de prensa relacionada con Preco">
+              <div>
+                <span>El Norte de Castilla · 15 feb 2026</span>
+                <h3>Edu Aguado (Preco), speaker del Real Valladolid Club de Futbol</h3>
+              </div>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="rider-section" id="rider">
+        <div class="section-shell rider-layout">
+          <div>
+            <p class="section-kicker">Rider tecnico</p>
+            <h2>Cabina Pioneer lista para directo.</h2>
+            <p>
+              Configuracion de referencia: setup CDJ, mesa Pioneer y 3 reproductores. En la ficha original se indica que normalmente trabajan con XDJ-RX3.
+            </p>
+            <div class="rider-tags">
+              <span><i data-lucide="sliders-horizontal"></i>Pioneer</span>
+              <span><i data-lucide="layers-3"></i>3 x CDJ</span>
+              <span><i data-lucide="activity"></i>100-140 BPM</span>
+            </div>
+          </div>
+          <div class="rider-visual">
+            <img src="assets/rider-cdj.png" alt="Referencia visual de rider tecnico Pioneer CDJ">
+          </div>
+        </div>
+      </section>
+
+      <section class="booking-section" id="booking">
+        <div class="section-shell booking-box">
+          <p class="section-kicker">Propuesta web</p>
+          <h2>Lista para presentar, facil de convertir en la web final.</h2>
+          <p>
+            La siguiente fase seria reemplazar textos provisionales por biografia oficial, anadir videos/reels, calendario de fechas y un formulario conectado al correo de contratacion.
+          </p>
+          <div class="proposal-grid" aria-label="Mejoras propuestas para la web final">
+            <div>
+              <i data-lucide="video"></i>
+              <span>Aftermovie y reels</span>
+            </div>
+            <div>
+              <i data-lucide="calendar-days"></i>
+              <span>Calendario de fechas</span>
+            </div>
+            <div>
+              <i data-lucide="download"></i>
+              <span>Press kit descargable</span>
+            </div>
+            <div>
+              <i data-lucide="form-input"></i>
+              <span>Formulario de booking</span>
+            </div>
+          </div>
+          <div class="booking-actions">
+            <a class="button primary" href="mailto:pipoypreco@gmail.com">
+              <i data-lucide="mail"></i>
+              Escribir a booking
+            </a>
+            <a class="button secondary" href="#inicio">
+              <i data-lucide="arrow-up"></i>
+              Volver arriba
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Plantilla de presentacion para Pipo & Preco por Mario Rodriguez y Guillermo Campos.</span>
+      <span>Datos base: MavelPoint, Instagram y articulos enlazados.</span>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
