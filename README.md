@@ -27,3 +27,5 @@ Abre `index.html` en el navegador o lanza un servidor estatico desde esta carpet
 - Mediterraneo premium.
 - Editorial prensa.
 - Festival urbano.
+
+Tambien incluye controles para iconos rectos, redondeados, tipo badge o minimos, y modos de imagen equilibrado, con mas fotos o con menos fotos.

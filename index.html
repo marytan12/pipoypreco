@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body data-style="club">
+  <body data-style="club" data-icon="sharp" data-photo="balanced">
     <header class="site-header" data-header>
       <a class="brand" href="#inicio" aria-label="Ir al inicio">
         <span class="brand-mark">P&P</span>
@@ -32,16 +32,41 @@
       </nav>
     </header>
 
-    <aside class="style-switcher" aria-label="Selector de estilos visuales">
-      <div>
-        <span>Estilo</span>
-        <strong data-style-name>Club nocturno</strong>
+    <aside class="style-switcher" aria-label="Selector de opciones visuales">
+      <div class="switch-row">
+        <div>
+          <span>Estilo</span>
+          <strong data-style-name>Club nocturno</strong>
+        </div>
+        <div class="style-options" role="group" aria-label="Cambiar estilo de plantilla">
+          <button class="style-dot club is-active" type="button" data-style-option="club" aria-label="Estilo club nocturno"></button>
+          <button class="style-dot mediterranean" type="button" data-style-option="mediterranean" aria-label="Estilo mediterraneo premium"></button>
+          <button class="style-dot editorial" type="button" data-style-option="editorial" aria-label="Estilo editorial prensa"></button>
+          <button class="style-dot festival" type="button" data-style-option="festival" aria-label="Estilo festival urbano"></button>
+        </div>
       </div>
-      <div class="style-options" role="group" aria-label="Cambiar estilo de plantilla">
-        <button class="style-dot club is-active" type="button" data-style-option="club" aria-label="Estilo club nocturno"></button>
-        <button class="style-dot mediterranean" type="button" data-style-option="mediterranean" aria-label="Estilo mediterraneo premium"></button>
-        <button class="style-dot editorial" type="button" data-style-option="editorial" aria-label="Estilo editorial prensa"></button>
-        <button class="style-dot festival" type="button" data-style-option="festival" aria-label="Estilo festival urbano"></button>
+      <div class="switch-row">
+        <div>
+          <span>Iconos</span>
+          <strong data-icon-name>Geometricos</strong>
+        </div>
+        <div class="pill-options" role="group" aria-label="Cambiar estilo de iconos">
+          <button class="mini-pill is-active" type="button" data-icon-option="sharp">Rectos</button>
+          <button class="mini-pill" type="button" data-icon-option="rounded">Redondos</button>
+          <button class="mini-pill" type="button" data-icon-option="badge">Badge</button>
+          <button class="mini-pill" type="button" data-icon-option="minimal">Min</button>
+        </div>
+      </div>
+      <div class="switch-row">
+        <div>
+          <span>Fotos</span>
+          <strong data-photo-name>Equilibrado</strong>
+        </div>
+        <div class="pill-options" role="group" aria-label="Cambiar cantidad de imagenes">
+          <button class="mini-pill is-active" type="button" data-photo-option="balanced">Medio</button>
+          <button class="mini-pill" type="button" data-photo-option="gallery">Mas</button>
+          <button class="mini-pill" type="button" data-photo-option="minimal">Menos</button>
+        </div>
       </div>
     </aside>
 
@@ -194,6 +219,55 @@
               <h3>Festival urbano</h3>
               <p>Color, contraste y actitud para cartel, escenario grande y comunicacion joven.</p>
             </button>
+          </div>
+          <div class="option-showcase">
+            <div>
+              <p class="section-kicker">Iconos</p>
+              <h3>Del look recto al redondeado.</h3>
+              <p>Los controles permiten ensenar variantes de iconografia sin tocar el contenido: botones cuadrados, iconos redondeados, badges visibles o una version minima.</p>
+              <div class="sample-icons">
+                <span><i data-lucide="headphones"></i></span>
+                <span><i data-lucide="mic-2"></i></span>
+                <span><i data-lucide="music-2"></i></span>
+                <span><i data-lucide="ticket"></i></span>
+              </div>
+            </div>
+            <div>
+              <p class="section-kicker">Fotos</p>
+              <h3>Mas visual o mas limpio.</h3>
+              <p>El modo “Mas fotos” abre una galeria de imagenes para vender energia. El modo “Menos” deja una web mas sobria, ideal si aun falta material fotografico oficial.</p>
+              <div class="photo-mode-preview">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section" data-photo-gallery>
+        <div class="section-shell">
+          <div class="section-heading split">
+            <div>
+              <p class="section-kicker">Galeria</p>
+              <h2>Mas presencia visual para vender directo.</h2>
+            </div>
+            <p class="style-note">Seccion opcional para cuando tengan mas fotos oficiales de escenario, publico y backstage.</p>
+          </div>
+          <div class="gallery-grid">
+            <figure>
+              <img src="assets/pipo-preco-cover.webp" alt="Actuacion de Pipo & Preco">
+              <figcaption>Cabina y energia de directo</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/press-preco.png" alt="Imagen de prensa de Preco">
+              <figcaption>Prensa y presencia publica</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/pipo-preco-profile.webp" alt="Perfil de Pipo & Preco">
+              <figcaption>Imagen de marca artistica</figcaption>
+            </figure>
           </div>
         </div>
       </section>
