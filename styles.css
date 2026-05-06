@@ -290,6 +290,8 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.46);
   border-radius: 999px;
   cursor: pointer;
+  transform: translateY(0) scale(1);
+  transition: transform 80ms ease, outline-color 120ms ease;
 }
 
 .pill-options {
@@ -309,6 +311,8 @@ a {
   font-weight: 900;
   padding: 5px 7px;
   white-space: nowrap;
+  transform: translateY(0) scale(1);
+  transition: background 140ms ease, color 140ms ease, transform 80ms ease;
 }
 
 .mini-pill.is-active {
@@ -455,11 +459,37 @@ h3 {
   padding: 10px 14px;
   font-size: 14px;
   font-weight: 800;
-  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+  transform: translateY(0) scale(1);
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 80ms ease;
 }
 
 .button:hover {
   border-color: color-mix(in srgb, var(--lime) 60%, var(--line));
+}
+
+.button:active,
+.mini-pill:active,
+.style-dot:active,
+.visual-card:active,
+.menu-button:active,
+.press-card:active,
+.text-link:active,
+.contact-methods a:active,
+.nav-cta:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.button:focus-visible,
+.mini-pill:focus-visible,
+.style-dot:focus-visible,
+.visual-card:focus-visible,
+.menu-button:focus-visible,
+.press-card:focus-visible,
+.text-link:focus-visible,
+.contact-methods a:focus-visible,
+.nav-cta:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
 }
 
 .button.primary {
@@ -874,7 +904,8 @@ body[data-icon="minimal"] .sample-icons svg {
   color: inherit;
   text-align: left;
   cursor: pointer;
-  transition: border-color 160ms ease, background 160ms ease;
+  transform: translateY(0) scale(1);
+  transition: border-color 160ms ease, background 160ms ease, transform 80ms ease;
 }
 
 .visual-card:hover {
