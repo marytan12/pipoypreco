@@ -25,6 +25,7 @@
         <a href="#estilos">Estilos</a>
         <a href="#prensa">Prensa</a>
         <a href="#rider">Rider</a>
+        <a href="#contacto">Contacto</a>
         <a class="nav-cta" href="mailto:pipoypreco@gmail.com">
           <i data-lucide="send"></i>
           Booking
@@ -73,7 +74,7 @@
     <main>
       <section class="hero" id="inicio" aria-label="Presentacion de Pipo y Preco">
         <picture>
-          <img src="assets/pipo-preco-cover.webp" alt="Pipo & Preco actuando en cabina" class="hero-media">
+          <img src="assets/event-rebobina.jpeg" alt="Cartel de Pipo & Preco para Rebobina Fest" class="hero-media">
         </picture>
         <div class="hero-shade"></div>
         <div class="hero-content">
@@ -173,7 +174,7 @@
       <section class="profile-section">
         <div class="section-shell profile-layout">
           <div class="profile-image-wrap">
-            <img src="assets/pipo-preco-profile.webp" alt="Imagen de perfil de Pipo & Preco">
+            <img src="assets/artist-portrait.jpeg" alt="Retrato promocional para Pipo & Preco">
           </div>
           <div class="profile-copy">
             <p class="section-kicker">Identidad</p>
@@ -237,9 +238,9 @@
               <h3>Mas visual o mas limpio.</h3>
               <p>El modo “Mas fotos” abre una galeria de imagenes para vender energia. El modo “Menos” deja una web mas sobria, ideal si aun falta material fotografico oficial.</p>
               <div class="photo-mode-preview">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span style="background-image: url('assets/live-stage-green.jpeg')"></span>
+                <span style="background-image: url('assets/scooter-los-pepes.jpeg')"></span>
+                <span style="background-image: url('assets/event-campus.jpeg')"></span>
               </div>
             </div>
           </div>
@@ -257,16 +258,20 @@
           </div>
           <div class="gallery-grid">
             <figure>
-              <img src="assets/pipo-preco-cover.webp" alt="Actuacion de Pipo & Preco">
+              <img src="assets/live-stage-green.jpeg" alt="Pipo & Preco en una actuacion con luces verdes">
               <figcaption>Cabina y energia de directo</figcaption>
             </figure>
             <figure>
-              <img src="assets/press-preco.png" alt="Imagen de prensa de Preco">
-              <figcaption>Prensa y presencia publica</figcaption>
+              <img src="assets/scooter-los-pepes.jpeg" alt="Imagen promocional de Los Pepes con scooter">
+              <figcaption>Activaciones y sesiones tematicas</figcaption>
             </figure>
             <figure>
-              <img src="assets/pipo-preco-profile.webp" alt="Perfil de Pipo & Preco">
-              <figcaption>Imagen de marca artistica</figcaption>
+              <img src="assets/event-campus.jpeg" alt="Cartel de evento Campus La Maraca de Pipo & Preco">
+              <figcaption>Carteleria y presencia de marca</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/poster-supernoventeros.jpeg" alt="Cartel Super Noventeros La Gira con Pipo & Preco">
+              <figcaption>Eventos y festivales confirmados</figcaption>
             </figure>
           </div>
         </div>
@@ -292,7 +297,7 @@
               <i data-lucide="arrow-up-right"></i>
             </a>
             <a class="press-card image-card" href="https://www.elnortedecastilla.es/valladolid/eduardo-aguado-cerveceria-velardes-refugio-relajarme-despues-20260215083315-nt.html" target="_blank" rel="noopener noreferrer">
-              <img src="assets/press-preco.png" alt="Imagen de prensa relacionada con Preco">
+              <img src="assets/venue-los-pepes.jpeg" alt="Imagen promocional de DJ Pipo y Preco en The Pepes">
               <div>
                 <span>El Norte de Castilla · 15 feb 2026</span>
                 <h3>Edu Aguado (Preco), speaker del Real Valladolid Club de Futbol</h3>
@@ -358,6 +363,53 @@
               Volver arriba
             </a>
           </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contacto">
+        <div class="section-shell contact-layout">
+          <div class="contact-copy">
+            <p class="section-kicker">Contacto</p>
+            <h2>Cuéntanos fecha, ciudad y tipo de evento.</h2>
+            <p>
+              Formulario preparado para la web final. En esta maqueta abre el correo de booking con los datos básicos del evento para que sea fácil pedir disponibilidad.
+            </p>
+            <div class="contact-methods">
+              <a href="mailto:pipoypreco@gmail.com"><i data-lucide="mail"></i>pipoypreco@gmail.com</a>
+              <a href="https://www.instagram.com/pipoyprecoshow" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i>@pipoyprecoshow</a>
+            </div>
+          </div>
+          <form class="contact-form" action="mailto:pipoypreco@gmail.com" method="post" enctype="text/plain">
+            <label>
+              Nombre
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="correo@ejemplo.com" required>
+            </label>
+            <label>
+              Teléfono
+              <input type="tel" name="telefono" placeholder="Teléfono de contacto">
+            </label>
+            <label>
+              Tipo de evento
+              <select name="evento">
+                <option>Festival o fiesta popular</option>
+                <option>Club o sala</option>
+                <option>Boda o evento privado</option>
+                <option>Evento de empresa</option>
+              </select>
+            </label>
+            <label class="full">
+              Mensaje
+              <textarea name="mensaje" placeholder="Fecha, ciudad, horario aproximado y cualquier detalle importante" required></textarea>
+            </label>
+            <button class="button primary full" type="submit">
+              <i data-lucide="send"></i>
+              Enviar solicitud
+            </button>
+          </form>
         </div>
       </section>
     </main>
