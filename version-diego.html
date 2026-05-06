@@ -40,12 +40,12 @@
     </div>
 
     <header class="hero-header" id="inicio">
-      <img class="hero-bg" src="assets/event-rebobina.jpeg" alt="Cartel de Pipo & Preco">
+      <img class="hero-bg" src="assets/event-rebobina.webp" alt="Cartel de Pipo & Preco">
       <div class="hero-overlay"></div>
 
       <nav class="nav-wrap" aria-label="Principal">
         <a class="logo-card" href="#inicio">
-          <img src="assets/artist-portrait.jpeg" alt="Pipo & Preco">
+          <img src="assets/artist-portrait.webp" alt="Pipo & Preco">
           <strong>Pipo & Preco</strong>
           <small>DJ Show</small>
         </a>
@@ -82,8 +82,8 @@
           </p>
         </div>
         <div class="image-pair">
-          <img src="assets/live-stage-green.jpeg" alt="Actuacion de Pipo & Preco">
-          <img src="assets/scooter-los-pepes.jpeg" alt="Imagen promocional DJ Pipo y Preco">
+          <img src="assets/live-stage-green.webp" alt="Actuacion de Pipo & Preco">
+          <img src="assets/scooter-los-pepes.webp" alt="Imagen promocional DJ Pipo y Preco">
         </div>
       </section>
 
@@ -122,10 +122,15 @@
           <p>Una web de este estilo necesita demostrar recorrido visual: fotos de cabina, carteleria y piezas promocionales.</p>
         </div>
         <div class="classic-gallery">
-          <img src="assets/event-campus.jpeg" alt="Cartel Campus La Maraca">
-          <img src="assets/poster-supernoventeros.jpeg" alt="Cartel Super Noventeros">
-          <img src="assets/venue-los-pepes.jpeg" alt="The Pepes DJ Pipo y Preco">
-          <img src="assets/live-stage-purple.jpeg" alt="Directo con luces de escenario">
+          <img src="assets/event-campus.webp" alt="Cartel Campus La Maraca">
+          <img src="assets/poster-supernoventeros.webp" alt="Cartel Super Noventeros">
+          <img src="assets/venue-los-pepes.webp" alt="The Pepes DJ Pipo y Preco">
+          <img src="assets/live-stage-purple.webp" alt="Directo con luces de escenario">
+        </div>
+        <div class="classic-presskit">
+          <h3>Press kit descargable</h3>
+          <p>Bio corta, fotos, rider tecnico y material de booking para promotores y prensa.</p>
+          <a class="outline-btn" href="assets/pipo-preco-press-kit.zip" download>Descargar press kit</a>
         </div>
       </section>
 
@@ -160,6 +165,24 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script>
       if (window.lucide) window.lucide.createIcons();
+      const revealTargets = document.querySelectorAll(".intro-section, .services-grid article, .gallery-copy, .classic-gallery img, .classic-presskit, .about-box, .contact-form");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        revealTargets.forEach((target) => {
+          target.setAttribute("data-reveal", "");
+          observer.observe(target);
+        });
+      } else {
+        revealTargets.forEach((target) => target.classList.add("is-visible"));
+      }
     </script>
   </body>
 </html>
+

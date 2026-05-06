@@ -104,3 +104,28 @@ syncHeader();
 if (window.lucide) {
   window.lucide.createIcons();
 }
+
+const revealTargets = document.querySelectorAll(
+  ".section-shell, .set-cards article, .press-card, .gallery-grid figure, .proposal-grid div, .press-kit-box, .contact-form"
+);
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealTargets.forEach((target) => {
+    target.setAttribute("data-reveal", "");
+    revealObserver.observe(target);
+  });
+} else {
+  revealTargets.forEach((target) => target.classList.add("is-visible"));
+}

@@ -21,6 +21,25 @@ body {
   overflow-x: clip;
 }
 
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 body {
   background: var(--paper);
   color: var(--ink);
@@ -350,6 +369,19 @@ h3 {
   width: 100%;
   height: 360px;
   object-fit: cover;
+}
+
+.classic-presskit {
+  width: min(760px, 100%);
+  margin: 34px auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 26px;
+  text-align: center;
+}
+
+.classic-presskit p {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
 }
 
 .about-contact {
