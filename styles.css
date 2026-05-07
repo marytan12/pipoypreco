@@ -16,10 +16,10 @@
   --hero-shade-b: rgba(0, 0, 0, 0.46);
   --cream: #f2f2ef;
   --paper: #f8f6f1;
-  --radius-ui: 0;
-  --radius-card: 0;
-  --icon-bg: transparent;
-  --icon-color: var(--cyan);
+  --radius-ui: 14px;
+  --radius-card: 18px;
+  --icon-bg: var(--lime);
+  --icon-color: #080808;
   --icon-border: transparent;
 }
 
@@ -255,7 +255,10 @@ a {
 
 .header-socials .social-instagram {
   background:
-    radial-gradient(circle at 30% 108%, #fdf497 0 18%, #fd5949 42%, #d6249f 64%, #285aeb 100%);
+    radial-gradient(circle at 30% 105%, #fdf497 0 18%, #fd5949 42%, #d6249f 64%, #285aeb 100%);
+  background-color: #d6249f;
+  background-size: 140% 140%;
+  background-position: center;
   color: #fff;
 }
 
@@ -287,7 +290,6 @@ a {
   font-size: 20px;
   font-weight: 900;
   overflow: hidden;
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.34);
   transition: width 180ms ease, height 180ms ease, font-size 180ms ease, background 180ms ease;
 }
 
@@ -354,6 +356,7 @@ a {
   border: 1px solid var(--line);
   border-radius: var(--radius-ui);
   background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
   color: var(--ink);
 }
 
@@ -1284,6 +1287,29 @@ body[data-photo="minimal"] .press-grid {
   justify-content: center;
 }
 
+.calendar-section {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--black) 96%, #ffffff), color-mix(in srgb, var(--black) 90%, #ffffff));
+}
+
+.calendar-frame {
+  margin-top: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+  padding: clamp(10px, 2vw, 16px);
+  box-shadow: var(--shadow);
+}
+
+.calendar-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: clamp(460px, 68vh, 720px);
+  border: 0;
+  border-radius: max(8px, calc(var(--radius-card) - 6px));
+  background: #ffffff;
+}
+
 .contact-section {
   background: color-mix(in srgb, var(--black) 92%, #ffffff);
 }
@@ -1430,7 +1456,6 @@ svg {
   }
 
   .brand-mark {
-    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.42);
     width: 58px;
     height: 58px;
     font-size: 16px;
