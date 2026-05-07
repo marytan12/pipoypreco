@@ -1,0 +1,255 @@
+.about-page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px clamp(16px, 4vw, 52px);
+  background: color-mix(in srgb, var(--black) 86%, transparent);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+.about-brand .brand-mark {
+  width: 48px;
+  height: 48px;
+  font-size: 14px;
+}
+
+.about-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.about-nav a {
+  padding: 9px 10px;
+  color: color-mix(in srgb, var(--ink) 76%, transparent);
+}
+
+.about-nav a:hover,
+.about-nav a.is-active {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--lime) 18%, transparent);
+  box-shadow: inset 0 -2px 0 var(--lime);
+}
+
+.about-hero {
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  padding: 120px clamp(18px, 5vw, 70px) 54px;
+}
+
+.about-hero-media,
+.about-hero-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about-hero-media {
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.12) contrast(1.04);
+}
+
+.about-hero-shade {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.28)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(7, 7, 7, 0.94));
+}
+
+.about-hero-copy {
+  position: relative;
+  width: min(760px, 100%);
+  z-index: 1;
+}
+
+.about-hero-copy p {
+  width: min(620px, 100%);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.about-story {
+  width: min(1080px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: clamp(54px, 8vw, 94px) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 58px);
+}
+
+.story-copy p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.about-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.about-facts span {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-ui);
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  padding: 9px 12px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.about-gallery-section {
+  background: color-mix(in srgb, var(--black) 90%, #ffffff);
+  padding: clamp(54px, 8vw, 94px) 0;
+}
+
+.about-gallery-heading {
+  width: min(1080px, calc(100% - 36px));
+  margin: 0 auto 28px;
+}
+
+.about-gallery {
+  width: min(1080px, calc(100% - 36px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 230px;
+  gap: 12px;
+}
+
+.about-gallery figure {
+  position: relative;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--panel);
+}
+
+.about-gallery figure.wide {
+  grid-column: span 2;
+}
+
+.about-gallery figure.tall {
+  grid-row: span 2;
+}
+
+.about-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 420ms ease;
+}
+
+.about-gallery figure:hover img {
+  transform: scale(1.035);
+}
+
+.about-gallery figcaption {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  width: fit-content;
+  max-width: calc(100% - 24px);
+  background: color-mix(in srgb, var(--black) 76%, transparent);
+  color: var(--ink);
+  padding: 8px 10px;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.about-cta {
+  width: min(1080px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: clamp(54px, 8vw, 94px) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.about-cta div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 760px) {
+  .about-page-header {
+    align-items: center;
+    padding: 10px 14px;
+  }
+
+  .about-brand span:last-child {
+    display: none;
+  }
+
+  .about-brand .brand-mark {
+    width: 42px;
+    height: 42px;
+    font-size: 13px;
+  }
+
+  .about-nav {
+    gap: 4px;
+    font-size: 11px;
+  }
+
+  .about-nav a {
+    padding: 8px 7px;
+  }
+
+  .about-hero {
+    min-height: 70vh;
+    padding: 96px 16px 34px;
+  }
+
+  .about-hero-copy p {
+    font-size: 16px;
+  }
+
+  .about-story,
+  .about-cta {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+    width: min(100% - 28px, 1080px);
+  }
+
+  .about-gallery-heading,
+  .about-gallery {
+    width: min(100% - 28px, 1080px);
+  }
+
+  .about-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 190px;
+  }
+
+  .about-gallery figure.wide,
+  .about-gallery figure.tall {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}

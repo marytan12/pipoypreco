@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070707">
+    <meta name="description" content="Quienes son Pipo & Preco, galeria de fotos y material visual para eventos.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pipo & Preco">
+    <meta property="og:title" content="Pipo & Preco | Quienes somos">
+    <meta property="og:description" content="Conoce la propuesta de Pipo & Preco y su galeria de fotos para eventos, festivales y booking.">
+    <meta property="og:image" content="assets/share-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="assets/share-preview.jpg">
+    <link rel="icon" type="image/jpeg" href="assets/share-preview.jpg">
+    <title>Pipo & Preco | Quienes somos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quienes-somos.css">
+  </head>
+  <body data-style="club" data-icon="badge" data-photo="balanced">
+    <header class="about-page-header">
+      <a class="brand about-brand" href="index.html" aria-label="Volver al inicio">
+        <span class="brand-mark">P&P</span>
+        <span>Pipo & Preco</span>
+      </a>
+      <nav class="about-nav" aria-label="Navegacion secundaria">
+        <a href="index.html">Inicio</a>
+        <a class="is-active" href="quienes-somos.html">Quienes somos</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about-hero">
+        <img src="assets/live-stage-green.webp" alt="Pipo & Preco en directo" class="about-hero-media">
+        <div class="about-hero-shade"></div>
+        <div class="about-hero-copy">
+          <p class="section-kicker">Quienes somos</p>
+          <h1>Pipo & Preco</h1>
+          <p>
+            Somos una propuesta DJ pensada para fiestas que necesitan energia, cercania y musica reconocible. Una cabina flexible para festivales, salas, plazas y eventos privados.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-story">
+        <div>
+          <p class="section-kicker">La propuesta</p>
+          <h2>Una sesion abierta para conectar con mucha gente distinta.</h2>
+        </div>
+        <div class="story-copy">
+          <p>
+            Pipo & Preco mezclan hits populares, electronica bailable, pop, rock, indie y sonidos latinos con una idea clara: que la pista no se enfrie. La web final puede usar este apartado para contar su historia real, sus inicios, su forma de entender el show y los tipos de eventos donde mejor funcionan.
+          </p>
+          <div class="about-facts">
+            <span>Formato: Duo DJ</span>
+            <span>BPM: 100-140</span>
+            <span>Origen: Espana</span>
+            <span>Rider: Pioneer</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-gallery-section">
+        <div class="about-gallery-heading">
+          <p class="section-kicker">Galeria</p>
+          <h2>Fotos para vender energia, cartel y presencia.</h2>
+        </div>
+        <div class="about-gallery">
+          <figure class="wide">
+            <img src="assets/event-rebobina.webp" alt="Cartel Rebobina Fest de Pipo & Preco">
+            <figcaption>Carteleria de evento</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/artist-portrait.webp" alt="Retrato promocional de Pipo & Preco">
+            <figcaption>Imagen promocional</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/event-campus.webp" alt="Cartel Campus La Maraca de Pipo & Preco">
+            <figcaption>Presencia de marca</figcaption>
+          </figure>
+          <figure class="tall">
+            <img src="assets/scooter-los-pepes.webp" alt="Imagen promocional de DJ Pipo y Preco en Los Pepes">
+            <figcaption>Sesiones tematicas</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/poster-supernoventeros.webp" alt="Cartel Super Noventeros La Gira">
+            <figcaption>Festivales</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/live-stage-purple.webp" alt="Directo de Pipo & Preco con luces de escenario">
+            <figcaption>Directo</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="assets/venue-los-pepes.webp" alt="The Pepes DJ Pipo y Preco">
+            <figcaption>Activaciones y locales</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="about-cta">
+        <h2>Quieres llevar Pipo & Preco a tu evento?</h2>
+        <div>
+          <a class="button primary" href="mailto:pipoypreco@gmail.com"><i data-lucide="mail"></i>Booking</a>
+          <a class="button secondary" href="assets/pipo-preco-press-kit.zip" download><i data-lucide="download"></i>Press kit</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+      if (window.lucide) window.lucide.createIcons();
+      document.querySelectorAll(".about-story, .about-gallery figure, .about-cta").forEach((target) => {
+        target.setAttribute("data-reveal", "");
+        target.classList.add("is-visible");
+      });
+    </script>
+  </body>
+</html>

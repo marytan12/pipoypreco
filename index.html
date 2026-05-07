@@ -26,17 +26,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body data-style="club" data-icon="sharp" data-photo="balanced">
+  <body data-style="club" data-icon="badge" data-photo="balanced">
     <header class="site-header" data-header>
       <a class="brand" href="#inicio" aria-label="Ir al inicio">
         <span class="brand-mark">P&P</span>
         <span>Pipo & Preco</span>
       </a>
+      <div class="header-socials" aria-label="Redes sociales">
+        <a href="https://www.instagram.com/pipoyprecoshow" target="_blank" rel="noopener noreferrer" aria-label="Instagram"></a>
+        <a href="mailto:pipoypreco@gmail.com" aria-label="Email"></a>
+        <a href="https://www.mavelpoint.com/es/artist/pipoypreco/overview" target="_blank" rel="noopener noreferrer" aria-label="MavelPoint"></a>
+        <a href="assets/pipo-preco-press-kit.zip" download aria-label="Press kit"></a>
+        <a href="#contacto" aria-label="Contacto"></a>
+      </div>
       <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button>
         <i data-lucide="menu"></i>
       </button>
       <nav class="site-nav" data-nav>
         <a href="#inicio">Inicio</a>
+        <a href="quienes-somos.html">Quienes somos</a>
         <a href="#show">Show</a>
         <a href="#musica">Musica</a>
         <a href="#estilos">Estilos</a>
@@ -49,44 +57,6 @@
         </a>
       </nav>
     </header>
-
-    <aside class="style-switcher" aria-label="Selector de opciones visuales">
-      <div class="switch-row">
-        <div>
-          <span>Estilo</span>
-          <strong data-style-name>Club nocturno</strong>
-        </div>
-        <div class="style-options" role="group" aria-label="Cambiar estilo de plantilla">
-          <button class="style-dot club is-active" type="button" data-style-option="club" aria-label="Estilo club nocturno"></button>
-          <button class="style-dot mediterranean" type="button" data-style-option="mediterranean" aria-label="Estilo mediterraneo premium"></button>
-          <button class="style-dot editorial" type="button" data-style-option="editorial" aria-label="Estilo editorial prensa"></button>
-          <button class="style-dot festival" type="button" data-style-option="festival" aria-label="Estilo festival urbano"></button>
-        </div>
-      </div>
-      <div class="switch-row">
-        <div>
-          <span>Iconos</span>
-          <strong data-icon-name>Geometricos</strong>
-        </div>
-        <div class="pill-options" role="group" aria-label="Cambiar estilo de iconos">
-          <button class="mini-pill is-active" type="button" data-icon-option="sharp">Rectos</button>
-          <button class="mini-pill" type="button" data-icon-option="rounded">Redondos</button>
-          <button class="mini-pill" type="button" data-icon-option="badge">Badge</button>
-          <button class="mini-pill" type="button" data-icon-option="minimal">Min</button>
-        </div>
-      </div>
-      <div class="switch-row">
-        <div>
-          <span>Fotos</span>
-          <strong data-photo-name>Equilibrado</strong>
-        </div>
-        <div class="pill-options" role="group" aria-label="Cambiar cantidad de imagenes">
-          <button class="mini-pill is-active" type="button" data-photo-option="balanced">Medio</button>
-          <button class="mini-pill" type="button" data-photo-option="gallery">Mas</button>
-          <button class="mini-pill" type="button" data-photo-option="minimal">Menos</button>
-        </div>
-      </div>
-    </aside>
 
     <main>
       <section class="hero" id="inicio" aria-label="Presentacion de Pipo y Preco">

@@ -123,7 +123,7 @@ photoButtons.forEach((button) => {
 });
 
 setStyle(localStorage.getItem("pipoypreco-style") || "club");
-setIconStyle(localStorage.getItem("pipoypreco-icon-style") || "sharp");
+setIconStyle("badge");
 setPhotoMode(localStorage.getItem("pipoypreco-photo-mode") || "balanced");
 
 window.addEventListener("scroll", syncHeader, { passive: true });
