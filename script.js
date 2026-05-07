@@ -1,6 +1,7 @@
 const header = document.querySelector("[data-header]");
 const menuButton = document.querySelector("[data-menu-button]");
 const nav = document.querySelector("[data-nav]");
+const navSectionLinks = document.querySelectorAll('.site-nav a[href^="#"]');
 const styleName = document.querySelector("[data-style-name]");
 const iconName = document.querySelector("[data-icon-name]");
 const photoName = document.querySelector("[data-photo-name]");
@@ -44,6 +45,33 @@ nav?.querySelectorAll("a").forEach((link) => {
     menuButton?.setAttribute("aria-expanded", "false");
   });
 });
+
+const sectionIds = Array.from(navSectionLinks)
+  .map((link) => link.getAttribute("href")?.slice(1))
+  .filter(Boolean);
+const trackedSections = sectionIds
+  .map((id) => document.getElementById(id))
+  .filter(Boolean);
+
+const setActiveNav = (activeId) => {
+  navSectionLinks.forEach((link) => {
+    link.classList.toggle("is-active", link.getAttribute("href") === `#${activeId}`);
+  });
+};
+
+const syncActiveSection = () => {
+  const headerOffset = header?.offsetHeight ?? 0;
+  const checkpoint = window.scrollY + headerOffset + Math.max(80, window.innerHeight * 0.18);
+  let activeId = trackedSections[0]?.id ?? "inicio";
+
+  trackedSections.forEach((section) => {
+    if (section.offsetTop <= checkpoint) {
+      activeId = section.id;
+    }
+  });
+
+  setActiveNav(activeId);
+};
 
 const setStyle = (style) => {
   document.body.dataset.style = style;
@@ -99,7 +127,10 @@ setIconStyle(localStorage.getItem("pipoypreco-icon-style") || "sharp");
 setPhotoMode(localStorage.getItem("pipoypreco-photo-mode") || "balanced");
 
 window.addEventListener("scroll", syncHeader, { passive: true });
+window.addEventListener("scroll", syncActiveSection, { passive: true });
+window.addEventListener("resize", syncActiveSection);
 syncHeader();
+syncActiveSection();
 
 if (window.lucide) {
   window.lucide.createIcons();

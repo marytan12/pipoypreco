@@ -161,11 +161,15 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
+  min-height: 92px;
   padding: 14px clamp(16px, 3vw, 40px);
-  transition: background 180ms ease, border-color 180ms ease;
+  transition: background 180ms ease, border-color 180ms ease, min-height 180ms ease, padding 180ms ease;
 }
 
 .site-header.is-scrolled {
+  min-height: 64px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background: color-mix(in srgb, var(--black) 86%, transparent);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
@@ -182,38 +186,66 @@ a {
 }
 
 .brand {
+  order: 1;
   gap: 10px;
   font-weight: 800;
   letter-spacing: 0;
+  transition: margin-left 180ms ease;
 }
 
 .brand-mark {
   display: grid;
-  width: 36px;
-  height: 36px;
+  width: 72px;
+  height: 72px;
   place-items: center;
   border-radius: var(--radius-ui);
   border: 1px solid rgba(255, 255, 255, 0.26);
   background: color-mix(in srgb, var(--ink) 8%, transparent);
   color: var(--lime);
   font-family: Archivo, Inter, sans-serif;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 900;
+  transition: width 180ms ease, height 180ms ease, font-size 180ms ease, background 180ms ease;
+}
+
+.site-header.is-scrolled .brand {
+  order: 3;
+  margin-left: auto;
+}
+
+.site-header.is-scrolled .brand-mark {
+  width: 38px;
+  height: 38px;
+  font-size: 12px;
+}
+
+.site-header.is-scrolled .brand span:last-child {
+  display: none;
 }
 
 .site-nav {
+  order: 2;
   gap: 4px;
   font-size: 13px;
   font-weight: 700;
+  transition: opacity 160ms ease;
 }
 
 .site-nav a {
+  position: relative;
   padding: 9px 10px;
   color: color-mix(in srgb, var(--ink) 78%, transparent);
+  transition: color 140ms ease, background 140ms ease;
 }
 
-.site-nav a:hover {
+.site-nav a:hover,
+.site-nav a.is-active {
   color: var(--ink);
+}
+
+.site-nav a.is-active {
+  background: color-mix(in srgb, var(--lime) 18%, transparent);
+  box-shadow: inset 0 -2px 0 var(--lime);
 }
 
 .nav-cta {
@@ -224,6 +256,7 @@ a {
 }
 
 .menu-button {
+  order: 3;
   display: none;
   width: 40px;
   height: 40px;
@@ -232,6 +265,35 @@ a {
   border-radius: var(--radius-ui);
   background: rgba(255, 255, 255, 0.08);
   color: var(--ink);
+}
+
+.site-header.is-scrolled .menu-button {
+  order: 1;
+  display: grid;
+}
+
+.site-header.is-scrolled .site-nav {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: clamp(16px, 3vw, 40px);
+  right: clamp(16px, 3vw, 40px);
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--black) 94%, transparent);
+  padding: 10px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.site-header.is-scrolled .site-nav.is-open {
+  display: flex;
+}
+
+.site-header.is-scrolled .site-nav a {
+  justify-content: space-between;
+  padding: 12px 14px;
 }
 
 .style-switcher {
@@ -1178,6 +1240,22 @@ svg {
 @media (max-width: 880px) {
   .menu-button {
     display: grid;
+    order: 1;
+  }
+
+  .brand {
+    order: 3;
+    margin-left: auto;
+  }
+
+  .brand-mark {
+    width: 48px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .brand span:last-child {
+    display: none;
   }
 
   .site-nav {
@@ -1244,6 +1322,7 @@ svg {
   }
 
   .site-header {
+    min-height: 68px;
     padding: 12px 14px;
   }
 
